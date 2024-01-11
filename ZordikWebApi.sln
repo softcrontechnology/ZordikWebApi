@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZordikWebApi", "ZordikWebApi\ZordikWebApi.csproj", "{480793B6-AA00-494E-9335-EB086BE7C39A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setup", "Setup\Setup.csproj", "{0D5EA1D5-CD1B-4ABD-8D7D-65F52286BFEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{480793B6-AA00-494E-9335-EB086BE7C39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480793B6-AA00-494E-9335-EB086BE7C39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480793B6-AA00-494E-9335-EB086BE7C39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480793B6-AA00-494E-9335-EB086BE7C39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5EA1D5-CD1B-4ABD-8D7D-65F52286BFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5EA1D5-CD1B-4ABD-8D7D-65F52286BFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5EA1D5-CD1B-4ABD-8D7D-65F52286BFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5EA1D5-CD1B-4ABD-8D7D-65F52286BFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {939B9B9B-3362-4F65-8396-0785F5EE6B90}
+	EndGlobalSection
+EndGlobal
