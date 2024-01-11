@@ -11,19 +11,19 @@ namespace ZordikWebApi.Controllers.User.cart
     [Authorize]
     [Route("api/[action]")]
     [ApiController]
-    public class AddCartAPIController : Controller
+    public class DeleteCartAPIController : Controller
     {
-        private readonly IAddCart _addCart;
+        private readonly IDeleteCart _deleteCart;
 
-        public AddCartAPIController(IAddCart addCart)
+        public DeleteCartAPIController(IDeleteCart deleteCart)
         {
-            _addCart = addCart;
+            _deleteCart = deleteCart;
         }
 
         [HttpPost]
-        public CommonResponse<AddCartResponse> AddToCart([FromBody] AddCartRequest objRequest)
+        public CommonResponse<DeleteCartResponse> DeleteCartItem([FromBody] DeleteCartRequest objRequest)
         {
-            return _addCart.AddToCart(objRequest);
+            return _deleteCart.DeleteCartItem(objRequest);
         }
     }
 }

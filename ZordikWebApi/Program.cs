@@ -18,6 +18,8 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<ILogin, Login>();
 builder.Services.AddScoped<ICreateAccount, CreateAccount>();
 builder.Services.AddScoped<IGetCart, GetCart>();
+builder.Services.AddScoped<IAddCart, AddCart>();
+builder.Services.AddScoped<IDeleteCart, DeleteCart>();
 #endregion
 
 
