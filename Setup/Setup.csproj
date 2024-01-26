@@ -13,4 +13,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BL\User\blog\" />
+    <Folder Include="ITF\User\blog\" />
+    <Folder Include="Request\User\blog\" />
+    <Folder Include="Response\User\blog\" />
+  </ItemGroup>
+
 </Project>

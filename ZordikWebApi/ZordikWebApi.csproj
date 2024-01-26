@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Setup\Setup.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\User\blog\" />
+  </ItemGroup>
+
 </Project>

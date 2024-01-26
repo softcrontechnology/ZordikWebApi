@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Setup.DAL;
@@ -8,7 +9,6 @@ using Setup.Response.User.auth;
 
 namespace ZordikWebApi.Controllers.User.auth
 {
-
     [Route("api/[action]")]
     [ApiController]
     public class LoginAPIController : Controller
