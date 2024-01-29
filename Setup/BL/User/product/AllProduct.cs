@@ -34,17 +34,30 @@ namespace Setup.BL.User.product
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-
+                    new MySqlParameter("@SPLimit", MySqlDbType.Int32) {Value = objRequest.Limit }
                 };
                 #endregion
 
                 DataSet ds = new DataSet();
-                string[] TableName = { "Response" };
+                string[] TableName = { "Response", "Records" };
                 _dataAccessClass.ExecuteQuery(CommandType.StoredProcedure, "GetAllProduct", ds, TableName, parameters);
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     response.ResponseCode = Convert.ToInt32(ds.Tables[0].Rows[0]["ResponseCode"]);
                     response.ResponseMessage = Convert.ToString(ds.Tables[0].Rows[0]["ResponseMessage"]);
+
+                    if (response.ResponseCode != 0 && ds.Tables.Count > 1 && ds.Tables[1].Rows.Count > 0)
+                    {
+                        string jsonData = JsonConvert.SerializeObject(ds.Tables[1]);
+                        response.ResponseData = jsonData;
+                        response.Token = null;
+                    }
+                    else
+                    {
+                        response.ResponseCode = 1;
+                        response.ResponseMessage = "No Record To Display!";
+                        response.ResponseData = null;
+                    }
                 }
                 else
                 {

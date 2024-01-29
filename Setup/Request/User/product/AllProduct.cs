@@ -8,6 +8,6 @@ namespace Setup.Request.User.product
 {
     public class AllProductRequest
     {
-
+        public int Limit { get; set; }
     }
 }
