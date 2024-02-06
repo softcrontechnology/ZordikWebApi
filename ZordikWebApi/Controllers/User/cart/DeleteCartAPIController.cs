@@ -9,7 +9,7 @@ using Setup.Response.User.cart;
 
 namespace ZordikWebApi.Controllers.User.cart
 {
-    [Authorize]
+    
     [Route("api/[action]")]
     [ApiController]
     public class DeleteCartAPIController : Controller
@@ -22,9 +22,16 @@ namespace ZordikWebApi.Controllers.User.cart
         }
 
         [HttpPost]
-        public CommonResponse<DeleteCartResponse> DeleteCartItem([FromBody] DeleteCartRequest objRequest)
+        public CommonResponse<DeleteCartItemResponse> DeleteCartItem([FromBody] DeleteCartItemRequest objRequest)
         {
             return _deleteCart.DeleteCartItem(objRequest);
+        }
+
+
+        [HttpPost]
+        public CommonResponse<ClearAllCartResponse> ClearCartData([FromBody] ClearAllCartRequest Request)
+        {
+            return _deleteCart.ClearCartData(Request);
         }
     }
 }

@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 
 namespace Setup.Request.User.cart
 {
-    public class DeleteCartRequest
+    public class DeleteCartItemRequest
+    {
+        [Required(ErrorMessage = "Cart Id Required !")]
+        public int CartId { get; set; }
+    }
+
+    public class ClearAllCartRequest
     {
         [Required(ErrorMessage = "User Id Required !")]
-        public int CartId { get; set; }
+        public int UserId { get; set; }
     }
 }

@@ -12,9 +12,6 @@ namespace Setup.Request.User.cart
         [Required(ErrorMessage = "Product id Required!")]
         public int ProductId { get; set; }
 
-        [Required(ErrorMessage = "Color id Required !")]
-        public int ColorId { get; set; }
-
         [Required(ErrorMessage = "Variation id Required !")]
         public int VariationId { get; set; }
 
@@ -22,6 +19,6 @@ namespace Setup.Request.User.cart
         public int Qty { get; set; }
 
         [Required(ErrorMessage = "User Id Required !")]
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
     }
 }

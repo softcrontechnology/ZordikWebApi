@@ -27,9 +27,11 @@ namespace Setup.BL.User.banner
             _dataAccessClass = new DataAccessClass(_configuration);
         }
 
-        public CommonResponse<HomeBannerResponse> GetHomeBanner(HomeBannerRequest objRequest)
+        #region  GetHome Banner Method
+
+        public CommonResponse<GetHomeBannerResponse> GetHomeBanner(GetHomeBannerRequest objRequest)
         {
-            CommonResponse<HomeBannerResponse> response = new CommonResponse<HomeBannerResponse>();
+            CommonResponse<GetHomeBannerResponse> response = new CommonResponse<GetHomeBannerResponse>();
 
             try
             {
@@ -82,5 +84,7 @@ namespace Setup.BL.User.banner
 
             return response;
         }
+
+        #endregion
     }
 }

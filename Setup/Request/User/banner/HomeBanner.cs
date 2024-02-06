@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace Setup.Request.User.banner
 {
-    public class HomeBannerRequest
+    public class GetHomeBannerRequest
     {
 
+    }
+
+    public class InsertHomeBannerRequest
+    {
+
+    }
+
+    public class UpdateHomeBannerRequest
+    {
+
+    }
+
+    public class DeleteHomeBannerRequest
+    {
+        
     }
 }

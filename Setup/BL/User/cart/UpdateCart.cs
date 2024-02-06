@@ -39,7 +39,7 @@ namespace Setup.BL.User.cart
 
                 DataSet ds = new DataSet();
                 string[] TableName = { "Response" };
-                _dataAccessClass.ExecuteQuery(CommandType.StoredProcedure, "DeleteCartItem", ds, TableName, parameters);
+                _dataAccessClass.ExecuteQuery(CommandType.StoredProcedure, "UpdateCartQuantity", ds, TableName, parameters);
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     response.ResponseCode = Convert.ToInt32(ds.Tables[0].Rows[0]["ResponseCode"]);

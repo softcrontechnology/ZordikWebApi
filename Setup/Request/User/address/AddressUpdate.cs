@@ -9,9 +9,6 @@ namespace Setup.Request.User.address
 {
     public class AddressUpdateRequest
     {
-        [Required(ErrorMessage = "User Id Required !")]
-        public int UserId { get; set; }
-
 
         [Required(ErrorMessage = "Address Id Required !")]
         public int AddressId { get; set; }

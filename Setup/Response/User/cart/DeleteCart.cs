@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Setup.Response.User.cart
 {
-    public class DeleteCartResponse
+    public class DeleteCartItemResponse
     {
+    }
+
+    public class ClearAllCartResponse
+    {
+
     }
 }

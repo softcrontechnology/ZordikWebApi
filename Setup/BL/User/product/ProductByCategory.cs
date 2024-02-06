@@ -34,7 +34,7 @@ namespace Setup.BL.User.product
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-                    new MySqlParameter("@SPCategoryId", MySqlDbType.Int32) {Value = objRequest.CategoryId }
+                    new MySqlParameter("@SPCategoryID", MySqlDbType.Int32) {Value = objRequest.CategoryId }
                 };
                 #endregion
 

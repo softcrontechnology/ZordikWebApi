@@ -10,6 +10,6 @@ namespace Setup.Request.User.wishlist
     public class GetWishlistRequest
     {
         [Required(ErrorMessage = "User Id required !")]
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
     }
 }

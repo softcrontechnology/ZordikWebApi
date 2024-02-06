@@ -20,10 +20,13 @@ namespace ZordikWebApi.Controllers.User.banner
         }
 
         [HttpPost]
-        public CommonResponse<HomeBannerResponse> GetHomeBanner([FromBody] HomeBannerRequest objRequest)
+        public CommonResponse<GetHomeBannerResponse> GetHomeBanner([FromBody] GetHomeBannerRequest objRequest)
         {
             return _homeBanner.GetHomeBanner(objRequest);
-        }
+        }     
+        
+
+
     }
 }
  

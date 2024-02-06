@@ -22,7 +22,7 @@ namespace Setup.Request.User.wishlist
         public int Qty { get; set; }
 
         [Required(ErrorMessage = "User Id Required !")]
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
 
     }
 }

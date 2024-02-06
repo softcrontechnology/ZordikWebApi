@@ -9,7 +9,7 @@ using Setup.Response.User.cart;
 
 namespace ZordikWebApi.Controllers.User.cart
 {
-    [Authorize]
+    
     [Route("api/[action]")]
     [ApiController]
     public class GetCartAPIController : Controller

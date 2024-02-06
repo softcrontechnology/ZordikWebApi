@@ -10,6 +10,6 @@ namespace Setup.Request.User.review
     public class GetReviewRequest
     {
         [Required(ErrorMessage = "Product Id Required !")]
-        public int ProductId { get; set; }
+        public int ProductID { get; set; }
     }
 }

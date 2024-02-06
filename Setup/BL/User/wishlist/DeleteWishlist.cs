@@ -55,7 +55,7 @@ namespace Setup.BL.User.wishlist
             catch (Exception ex)
             {
                 response.ResponseCode = 0;
-                response.ResponseMessage = ex.Message;
+                response.ResponseMessage = ex.Message;  
             }
 
             return response;

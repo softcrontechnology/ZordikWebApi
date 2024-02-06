@@ -34,7 +34,7 @@ namespace Setup.BL.User.wishlist
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-                    new MySqlParameter("@SPUserID", MySqlDbType.Int32) {Value = objRequest.UserId }
+                    new MySqlParameter("@SPUserID", MySqlDbType.String) {Value = objRequest.UserId }
                 };
                 #endregion
 

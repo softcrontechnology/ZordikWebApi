@@ -33,7 +33,7 @@ namespace Setup.BL.User.review
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-                    new MySqlParameter("@SPProductId", MySqlDbType.String) {Value = objRequest.ProductId }
+                    new MySqlParameter("@SPProductID", MySqlDbType.Int32) {Value = objRequest.ProductID }
                 };
                 #endregion
 

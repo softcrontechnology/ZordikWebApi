@@ -34,10 +34,9 @@ namespace Setup.BL.User.wishlist
                 MySqlParameter[] parameters =
                 {
                     new MySqlParameter("@SPProductId", MySqlDbType.Int32) {Value = objRequest.ProductId },
-                    new MySqlParameter("@SPColorID", MySqlDbType.Int32) {Value = objRequest.ColorId },
                     new MySqlParameter("@SPVariarionID", MySqlDbType.Int32) {Value = objRequest.VariationId },
                     new MySqlParameter("@SPQty", MySqlDbType.Int32) {Value = objRequest.Qty },
-                    new MySqlParameter("@SPUserID", MySqlDbType.Int32) {Value = objRequest.UserId }
+                    new MySqlParameter("@SPUserID", MySqlDbType.String) {Value = objRequest.UserId }
                 };
                 #endregion
 

@@ -11,6 +11,8 @@ namespace Setup.ITF.User.cart
 {
     public interface IDeleteCart
     {
-        CommonResponse<DeleteCartResponse> DeleteCartItem(DeleteCartRequest objRequest );
+        CommonResponse<DeleteCartItemResponse> DeleteCartItem(DeleteCartItemRequest objRequest );
+        CommonResponse<ClearAllCartResponse> ClearCartData(ClearAllCartRequest Request );
     }
 }
+

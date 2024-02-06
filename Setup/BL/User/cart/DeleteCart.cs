@@ -25,9 +25,10 @@ namespace Setup.BL.User.cart
             _dataAccessClass = new DataAccessClass(_configuration);
         }
 
-        public CommonResponse<DeleteCartResponse> DeleteCartItem (DeleteCartRequest objRequest)
+        #region Delete Cart Item Method
+        public CommonResponse<DeleteCartItemResponse> DeleteCartItem (DeleteCartItemRequest objRequest)
         {
-            CommonResponse<DeleteCartResponse> response = new CommonResponse<DeleteCartResponse> ();
+            CommonResponse<DeleteCartItemResponse> response = new CommonResponse<DeleteCartItemResponse> ();
             try
             {
                 #region Parameters
@@ -59,5 +60,48 @@ namespace Setup.BL.User.cart
             }
             return response;
         }
+
+        #endregion
+
+
+
+
+        #region Clear All Cart Data Method
+        public CommonResponse<ClearAllCartResponse> ClearCartData(ClearAllCartRequest Request)
+        {
+            CommonResponse<ClearAllCartResponse> response = new CommonResponse<ClearAllCartResponse>();
+            try
+            {
+                #region Parameters
+                MySqlParameter[] parameters =
+                {
+                    new MySqlParameter("@SPUserId", MySqlDbType.Int32) {Value = Request.UserId }
+                };
+                #endregion
+
+                DataSet ds = new DataSet();
+                string[] TableName = { "Response" };
+                _dataAccessClass.ExecuteQuery(CommandType.StoredProcedure, "ClearCartData", ds, TableName, parameters);
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    response.ResponseCode = Convert.ToInt32(ds.Tables[0].Rows[0]["ResponseCode"]);
+                    response.ResponseMessage = Convert.ToString(ds.Tables[0].Rows[0]["ResponseMessage"]);
+                }
+                else
+                {
+                    response.ResponseCode = 0;
+                    response.ResponseMessage = "No Data Found !";
+                    response.ResponseData = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.ResponseCode = 0;
+                response.ResponseMessage = ex.Message;
+            }
+            return response;
+        }
+
+        #endregion
     }
 }

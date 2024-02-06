@@ -32,7 +32,6 @@ namespace Setup.BL.User.address
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-                    new MySqlParameter("@SPUserId", MySqlDbType.Int32) {Value = objRequest.UserId },
                     new MySqlParameter("@SPAddressId", MySqlDbType.Int32) {Value = objRequest.AddressId },
                     new MySqlParameter("@SPName", MySqlDbType.String) {Value = objRequest.Name },
                     new MySqlParameter("@SPPhone", MySqlDbType.String) {Value = objRequest.Phone },

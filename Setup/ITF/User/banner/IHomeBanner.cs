@@ -11,6 +11,6 @@ namespace Setup.ITF.User.banner
 {
     public interface IHomeBanner
     {
-        CommonResponse<HomeBannerResponse> GetHomeBanner(HomeBannerRequest objRequest);
+        CommonResponse<GetHomeBannerResponse> GetHomeBanner(GetHomeBannerRequest objRequest);
     }
 }

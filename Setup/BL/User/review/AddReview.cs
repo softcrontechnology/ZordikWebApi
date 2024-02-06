@@ -35,7 +35,9 @@ namespace Setup.BL.User.review
                 #region Parameters
                 MySqlParameter[] parameters =
                 {
-                    new MySqlParameter("@SPUserID", MySqlDbType.String) {Value = objRequest.Review }
+                    new MySqlParameter("@SPUserID", MySqlDbType.Int32) {Value = objRequest.UserId },
+                    new MySqlParameter("@SPProductID", MySqlDbType.Int32) {Value = objRequest.ProductId },
+                    new MySqlParameter("@SPReview", MySqlDbType.String) {Value = objRequest.Review }
                 };
                 #endregion
 

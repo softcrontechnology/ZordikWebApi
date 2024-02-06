@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setup.Response.User.banner
+namespace Setup.Response.User.order
 {
-    public class GetHomeBannerResponse
+    public class CreateOrderResponse
     {
 
     }
 
-    public class InsertHomeBannerResponse
+    public class OrderItemResponse
     {
 
     }
